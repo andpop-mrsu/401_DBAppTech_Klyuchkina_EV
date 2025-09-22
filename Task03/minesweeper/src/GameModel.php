@@ -24,7 +24,8 @@ class GameModel
     }
 
     private function initializeFields(): void
-    {        $this->mineField = array_fill(0, $this->size, array_fill(0, $this->size, 0));
+    {
+        $this->mineField = array_fill(0, $this->size, array_fill(0, $this->size, 0));
         $this->visibleField = array_fill(0, $this->size, array_fill(0, $this->size, ' '));
     }
 
@@ -202,4 +203,3 @@ class GameModel
         return $row >= 0 && $row < $this->size && $col >= 0 && $col < $this->size;
     }
 }
-
